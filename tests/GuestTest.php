@@ -46,7 +46,10 @@ class GuestTest extends \PHPUnit_Framework_TestCase
      */
     public function testConstructor()
     {
-        $this->assertInstanceOf(Guest::class, new Guest());
+        $this->assertInstanceOf(
+            '\SpanishGuestReportGenerator\Guest',
+            new Guest()
+        );
     }
 
     public function isSpanishProvider()
@@ -71,7 +74,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetIsSpanish($actual, $expected)
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setIsSpanish($actual)
         );
 
@@ -89,7 +92,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetIDNumber()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g
             ->setIsSpanish($this->isSpanish)
             ->setIDNumber($this->idNumber)
@@ -108,7 +111,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetDocType()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setDocType($this->docType)
         );
 
@@ -125,7 +128,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetDocIssueDate()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setDocIssueDate($this->docIssueDate)
         );
 
@@ -142,7 +145,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetLastName1()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setLastName1($this->lastName1)
         );
 
@@ -159,7 +162,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetLastName2()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setLastName2($this->lastName2)
         );
 
@@ -176,7 +179,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetFirstName()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setFirstName($this->firstName)
         );
 
@@ -193,7 +196,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetGender()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setGender($this->gender)
         );
 
@@ -210,7 +213,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetBirthDate()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setBirthDate($this->birthDate)
         );
 
@@ -227,7 +230,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetCountryName()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setCountryName($this->countryName)
         );
 
@@ -244,7 +247,7 @@ class GuestTest extends \PHPUnit_Framework_TestCase
     public function testSetArrivalDate()
     {
         $this->assertInstanceOf(
-            Guest::class,
+            '\SpanishGuestReportGenerator\Guest',
             $this->g->setArrivalDate($this->arrivalDate)
         );
 

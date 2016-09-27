@@ -97,8 +97,14 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
      */
     public function testConstructor()
     {
-        $this->assertInstanceOf(GuestReport::class, new GuestReport($this->hf, $this->gf, $this->dt));
-        $this->assertInstanceOf(GuestReport::class, new GuestReport($this->hf, $this->gf));
+        $this->assertInstanceOf(
+            '\SpanishGuestReportGenerator\GuestReport',
+            new GuestReport($this->hf, $this->gf, $this->dt)
+        );
+        $this->assertInstanceOf(
+            '\SpanishGuestReportGenerator\GuestReport',
+            new GuestReport($this->hf, $this->gf)
+        );
     }
 
     public function chainCodeProvider()
@@ -221,7 +227,7 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
     public function testSetChain()
     {
         $this->assertInstanceOf(
-            GuestReport::class,
+            '\SpanishGuestReportGenerator\GuestReport',
             $this->gr->setChain(
                 'ABCDE12345',
                 'Lorem ipsum dolor sit amet',
@@ -236,7 +242,10 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetHotels()
     {
-        $this->assertInstanceOf(GuestReport::class, $this->gr->setHotels($this->hotels));
+        $this->assertInstanceOf(
+            '\SpanishGuestReportGenerator\GuestReport',
+            $this->gr->setHotels($this->hotels)
+        );
     }
 
     public function hotelProvider()
@@ -272,7 +281,10 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
 
         $hotels = $rp->getValue($this->gr);
 
-        $this->assertInstanceOf(Hotel::class, $hotels[$hotelCode]);
+        $this->assertInstanceOf(
+            '\SpanishGuestReportGenerator\Hotel',
+            $hotels[$hotelCode]
+        );
         $this->assertEquals($expected, $hotels[$hotelCode]);
     }
 
@@ -290,7 +302,10 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
 
         $this->gr->setHotel($hotelCode, $hotelName, $reportDateTime, $guests);
 
-        $this->assertInstanceOf(GuestReport::class, $this->gr->setHotelGuests($hotelCode, $guests));
+        $this->assertInstanceOf(
+            '\SpanishGuestReportGenerator\GuestReport',
+            $this->gr->setHotelGuests($hotelCode, $guests)
+        );
     }
 
     /**
@@ -334,7 +349,10 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue(vfsStreamWrapper::getRoot()->hasChild($this->directoryPath));
 
-        $this->assertInstanceOf(GuestReport::class, $result);
+        $this->assertInstanceOf(
+            '\SpanishGuestReportGenerator\GuestReport',
+            $result
+        );
     }
 
     /**

@@ -125,7 +125,7 @@ class HotelTest extends \PHPUnit_Framework_TestCase
     public function testSetHotelCode()
     {
         $this->assertInstanceOf(
-            Hotel::class,
+            '\SpanishGuestReportGenerator\Hotel',
             $this->h->setHotelCode($this->hotelCode)
         );
 
@@ -142,7 +142,7 @@ class HotelTest extends \PHPUnit_Framework_TestCase
     public function testSetHotelName()
     {
         $this->assertInstanceOf(
-            Hotel::class,
+            '\SpanishGuestReportGenerator\Hotel',
             $this->h->setHotelName($this->hotelName)
         );
 
@@ -159,7 +159,7 @@ class HotelTest extends \PHPUnit_Framework_TestCase
     public function testSetReportDateTime()
     {
         $this->assertInstanceOf(
-            Hotel::class,
+            '\SpanishGuestReportGenerator\Hotel',
             $this->h->setReportDateTime($this->dt)
         );
 
@@ -176,7 +176,7 @@ class HotelTest extends \PHPUnit_Framework_TestCase
     public function testSetGuests()
     {
         $this->assertInstanceOf(
-            Hotel::class,
+            '\SpanishGuestReportGenerator\Hotel',
             $this->h->setGuests($this->builtGuests)
         );
 
