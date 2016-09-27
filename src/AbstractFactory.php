@@ -5,8 +5,8 @@
  * @package    Spanish Guest Report Generator
  * @author     Javier Zapata <javierzapata82@gmail.com>
  * @copyright  2016 Javier Zapata <javierzapata82@gmail.com>
- * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
- * @link       http://github.com/nkm/spanish-guest-report-generator
+ * @license    https://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
+ * @link       https://github.com/nkm/spanish-guest-report-generator
  */
 
 namespace SpanishGuestReportGenerator;
@@ -19,8 +19,8 @@ include_once __DIR__.'/Util/helpers.php';
  * @package    Spanish Guest Report Generator
  * @author     Javier Zapata <javierzapata82@gmail.com>
  * @copyright  2016 Javier Zapata <javierzapata82@gmail.com>
- * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
- * @link       http://github.com/nkm/spanish-guest-report-generator
+ * @license    https://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
+ * @link       https://github.com/nkm/spanish-guest-report-generator
  */
 abstract class AbstractFactory
 {
