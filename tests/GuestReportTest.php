@@ -1,8 +1,6 @@
 <?php
 
 namespace SpanishGuestReportGenerator;
-
-use \PHPUnit\Framework\TestCase;
 use \org\bovigo\vfs\vfsStream;
 use \org\bovigo\vfs\vfsStreamWrapper;
 use \org\bovigo\vfs\vfsStreamDirectory;
@@ -10,7 +8,7 @@ use \org\bovigo\vfs\vfsStreamDirectory;
 /**
  * @coversDefaultClass \SpanishGuestReportGenerator\GuestReport
  */
-class GuestReportTest extends TestCase
+class GuestReportTest extends \PHPUnit_Framework_TestCase
 {
     private $gr;
 

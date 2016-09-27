@@ -2,12 +2,10 @@
 
 namespace SpanishGuestReportGenerator\Util;
 
-use \PHPUnit\Framework\TestCase;
-
 /**
  * @coversDefaultClass \SpanishGuestReportGenerator\Util\Helper
  */
-class HelpersTest extends TestCase
+class HelpersTest extends \PHPUnit_Framework_TestCase
 {
     public function isAssocArrayProvider()
     {

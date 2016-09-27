@@ -2,16 +2,14 @@
 
 namespace SpanishGuestReportGenerator;
 
-use \PHPUnit\Framework\TestCase;
-
 include_once __DIR__.'/helpers/InvokeMethodTrait.php';
 
 class SanitizerTraitImplementation
 {
-    use \SpanishGuestReportGenerator\SanitizerTrait;
+    use SanitizerTrait;
 }
 
-class SanitizerTraitTest extends TestCase
+class SanitizerTraitTest extends \PHPUnit_Framework_TestCase
 {
     use \InvokeMethodTrait;
 
