@@ -26,7 +26,7 @@ $ composer require nkm/spanish-guest-report-generator
 Usage
 -----
 
-TBF
+See `sample/index.php`.
 
 
 Test
@@ -45,7 +45,7 @@ $ phpunit
 Changelog
 ---------
 
-### Version 0.1.0 (26 September 2016)
+### Version 1.0.0 (27 September 2016)
 
 Initial release
 
