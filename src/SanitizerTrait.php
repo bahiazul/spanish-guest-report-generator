@@ -11,7 +11,7 @@
 
 namespace SpanishGuestReportGenerator;
 
-include_once __DIR__.'/Util/helpers.php';
+use SpanishGuestReportGenerator\Util\Helper;
 
 /**
  * Sanitizers
@@ -111,7 +111,7 @@ trait SanitizerTrait
      */
     private function sanitizeDate($date)
     {
-        $date = stringify($date);
+        $date = Helper::stringify($date);
 
         foreach (self::$dateFormats as $pattern) {
             if (preg_match($pattern, $date, $matches)) break;
@@ -197,11 +197,11 @@ trait SanitizerTrait
      */
     private function sanitizePresence($string, array $array)
     {
-        $string = stringify($string);
+        $string = Helper::stringify($string);
 
         return in_array($string, $array)
              ? $string
-             : stringify(array_shift($array));
+             : Helper::stringify(array_shift($array));
     }
 
     /**
@@ -212,8 +212,8 @@ trait SanitizerTrait
      */
     private function sanitizeLength($string, $length)
     {
-        $string = stringify($string);
-        $length < 0 && $length = 0;
+        $string = trim(Helper::stringify($string));
+        $length >= 0 || $length = 0;
 
         return substr($string, 0, $length);
     }

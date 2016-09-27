@@ -11,7 +11,7 @@
 
 namespace SpanishGuestReportGenerator;
 
-include_once __DIR__.'/Util/helpers.php';
+use SpanishGuestReportGenerator\Util\Helper;
 
 /**
  * Guest Report
@@ -313,7 +313,7 @@ class GuestReport
      */
     public function setDirectoryPath($path, $create = true)
     {
-        $path = rtrim(stringify($path), '\/');
+        $path = rtrim(Helper::stringify($path), '\/');
 
         if (!is_dir($path)) {
             if (!$create) {
