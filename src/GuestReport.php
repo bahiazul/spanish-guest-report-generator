@@ -237,10 +237,16 @@ class GuestReport
      * @param   array     $guests         Guests that belong to this Hotel
      * @return  GuestReport
      */
-    public function setHotel($hotelCode, $hotelName, \DateTime $reportDateTime, array $guests = [])
-    {
+    public function setHotel(
+        $hotelCode,
+        $hotelName,
+        \DateTime $reportDateTime = null,
+        array $guests = []
+    ) {
         $hotelCode = $this->sanitizeCode($hotelCode);
         $guests = $this->guestFactory->buildMultiple($guests);
+
+        $reportDateTime ?: new \DateTime;
 
         $args = compact('hotelCode', 'hotelName', 'reportDateTime', 'guests');
         $this->hotels[$hotelCode] = $this->hotelFactory->build($args);
@@ -267,40 +273,6 @@ class GuestReport
         $hotel->setGuests($guests);
 
         return $this;
-    }
-
-    /**
-     * Returns the report's data
-     *
-     * @return array
-     */
-    private function getRows()
-    {
-        $rows = [];
-        foreach ($this->hotels as $hotel) {
-            $rows = array_merge($rows, $hotel->getRows());
-        }
-
-        if (count($this->hotels) > 1) {
-            array_unshift($rows, $this->getHeadRow());
-        }
-
-        return $rows;
-    }
-
-    /**
-     * Returns the report's contents
-     *
-     * @return  string The report's contents
-     */
-    public function getContents()
-    {
-        $lines = array_map('self::rowToLine', $this->getRows());
-
-        $contents = implode(self::FILE_NEWLINE, $lines);
-        $contents = iconv(mb_internal_encoding(), self::FILE_ENCODING.'//TRANSLIT', $contents);
-
-        return $contents;
     }
 
     /**
@@ -382,6 +354,40 @@ class GuestReport
         }
 
         return $filename.'.'.$this->reportNumber;
+    }
+
+    /**
+     * Returns the report's contents
+     *
+     * @return  string The report's contents
+     */
+    private function getContents()
+    {
+        $lines = array_map('self::rowToLine', $this->getRows());
+
+        $contents = implode(self::FILE_NEWLINE, $lines);
+        $contents = iconv(mb_internal_encoding(), self::FILE_ENCODING.'//TRANSLIT', $contents);
+
+        return $contents;
+    }
+
+    /**
+     * Returns the report's data
+     *
+     * @return array
+     */
+    private function getRows()
+    {
+        $rows = [];
+        foreach ($this->hotels as $hotel) {
+            $rows = array_merge($rows, $hotel->getRows());
+        }
+
+        if (count($this->hotels) > 1) {
+            array_unshift($rows, $this->getHeadRow());
+        }
+
+        return $rows;
     }
 
     /**
