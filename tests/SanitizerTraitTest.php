@@ -1,8 +1,10 @@
 <?php
 
+namespace SpanishGuestReportGenerator;
+
 use \PHPUnit\Framework\TestCase;
 
-include_once __DIR__.'/InvokeMethodTrait.php';
+include_once __DIR__.'/helpers/InvokeMethodTrait.php';
 
 class SanitizerTraitImplementation
 {
@@ -11,7 +13,7 @@ class SanitizerTraitImplementation
 
 class SanitizerTraitTest extends TestCase
 {
-    use InvokeMethodTrait;
+    use \InvokeMethodTrait;
 
     private $traitObject;
 
@@ -291,15 +293,11 @@ class SanitizerTraitTest extends TestCase
             ['a',          ['a','b','c','d','e'], 'a'],
             ['c',          ['a','b','c','d','e'], 'c'],
             ['e',          ['a','b','c','d','e'], 'e'],
-
             ['x',          ['a','b','c','d','e'], 'a'],
-
             [3,            ['1','2','3','4','5'], '3'],
             [3,            [1,2,3,4,5],           '3'],
-
-            [new stdClass, ['a','b','c','d','e'], 'a'],
-            [new stdClass, ['','b','c','d','e'],  ''],
-
+            [new \stdClass, ['a','b','c','d','e'], 'a'],
+            [new \stdClass, ['','b','c','d','e'],  ''],
             [[],           ['a','b','c','d','e'], 'a'],
             [[],           ['','b','c','d','e'],  ''],
         ];
@@ -329,6 +327,8 @@ class SanitizerTraitTest extends TestCase
             ['abcdefbhijklmnopqrstuvwxyz', 32,  'abcdefbhijklmnopqrstuvwxyz'],
             ['abcdefbhijklmnopqrstuvwxyz', 0,   ''],
             ['abcdefbhijklmnopqrstuvwxyz', -33, ''],
+            ['abcdef     ',                10,  'abcdef'],
+            ['     abcdef',                10,  'abcdef'],
         ];
     }
 

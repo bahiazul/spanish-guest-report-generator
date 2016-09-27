@@ -7,6 +7,9 @@ use \org\bovigo\vfs\vfsStream;
 use \org\bovigo\vfs\vfsStreamWrapper;
 use \org\bovigo\vfs\vfsStreamDirectory;
 
+/**
+ * @coversDefaultClass \SpanishGuestReportGenerator\GuestReport
+ */
 class GuestReportTest extends TestCase
 {
     private $gr;
@@ -24,8 +27,8 @@ class GuestReportTest extends TestCase
             'lastName1'    => 'Eutychus',
             'lastName2'    => 'Tarik',
             'firstName'    => 'Orlov',
-            'gender'       => 'f',
-            'birthDate'    => '1972-11-05',
+            'gender'       => 'm',
+            'birthDate'    => '1972-00-00',
             'countryName'  => 'España',
             'arrivalDate'  => '2016-09-26',
         ],
@@ -40,19 +43,6 @@ class GuestReportTest extends TestCase
             'gender'       => 'f',
             'birthDate'    => '1972-04-28',
             'countryName'  => 'Holanda',
-            'arrivalDate'  => '2016-09-26',
-        ],
-        [
-            'isSpanish'    => false,
-            'idNumber'     => '09982824072174',
-            'docType'      => 'p',
-            'docIssueDate' => '2009-09-22',
-            'lastName1'    => 'Nuremberg',
-            'lastName2'    => '',
-            'firstName'    => 'Aindriú',
-            'gender'       => 'm',
-            'birthDate'    => '1975-09-05',
-            'countryName'  => 'Reino Unido',
             'arrivalDate'  => '2016-09-26',
         ],
     ];
@@ -328,7 +318,11 @@ class GuestReportTest extends TestCase
             $this->hotels
         );
 
-        $this->assertEquals($this->expectedContents, $this->gr->getContents());
+        $rc = new \ReflectionClass($this->gr);
+        $rm = $rc->getMethod('getContents');
+        $rm->setAccessible(true);
+
+        $this->assertEquals($this->expectedContents, $rm->invoke($this->gr));
     }
 
     /**

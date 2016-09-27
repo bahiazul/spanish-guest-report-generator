@@ -4,6 +4,9 @@ namespace SpanishGuestReportGenerator;
 
 use \PHPUnit\Framework\TestCase;
 
+/**
+ * @coversDefaultClass \SpanishGuestReportGenerator\Hotel
+ */
 class HotelTest extends TestCase
 {
     private $h;
@@ -22,7 +25,7 @@ class HotelTest extends TestCase
             'lastName1'    => 'Eutychus',
             'lastName2'    => 'Tarik',
             'firstName'    => 'Orlov',
-            'gender'       => 'f',
+            'gender'       => 'm',
             'birthDate'    => '1972-11-05',
             'countryName'  => 'España',
             'arrivalDate'  => '2016-09-26',
@@ -73,7 +76,7 @@ class HotelTest extends TestCase
             'Eutychus',
             'Tarik',
             'Orlov',
-            'F',
+            'M',
             '19721105',
             'España',
             '20160926',
@@ -116,9 +119,6 @@ class HotelTest extends TestCase
         $this->builtGuests = $this->gf->buildMultiple($this->guests);
 
         $this->h = new Hotel($this->hotelCode, $this->hotelName, $this->dt, $this->builtGuests);
-
-        // var_dump($this->rows, $this->h->getRows());
-        // die();
     }
 
     /**

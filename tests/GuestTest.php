@@ -4,6 +4,9 @@ namespace SpanishGuestReportGenerator;
 
 use \PHPUnit\Framework\TestCase;
 
+/**
+ * @coversDefaultClass \SpanishGuestReportGenerator\Guest
+ */
 class GuestTest extends TestCase
 {
     private $g;
@@ -15,7 +18,7 @@ class GuestTest extends TestCase
     private $lastName1    = 'Eutychus';
     private $lastName2    = 'Tarik';
     private $firstName    = 'Orlov';
-    private $gender       = 'f';
+    private $gender       = 'm';
     private $birthDate    = '1972-11-05';
     private $countryName  = 'España';
     private $arrivalDate  = '2016-09-26';
@@ -29,7 +32,7 @@ class GuestTest extends TestCase
         'Eutychus',
         'Tarik',
         'Orlov',
-        'F',
+        'M',
         '19721105',
         'España',
         '20160926',

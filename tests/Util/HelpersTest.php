@@ -1,9 +1,12 @@
 <?php
 
+namespace SpanishGuestReportGenerator\Util;
+
 use \PHPUnit\Framework\TestCase;
 
-include_once __DIR__.'/../../src/Util/helpers.php';
-
+/**
+ * @coversDefaultClass \SpanishGuestReportGenerator\Util\Helper
+ */
 class HelpersTest extends TestCase
 {
     public function isAssocArrayProvider()
@@ -28,8 +31,8 @@ class HelpersTest extends TestCase
             [false, ''],
             [[], ''],
             [[1,2,3], ''],
-            [new stdClass, ''],
-            [new SimpleXMLElement('<yo>dude!</yo>'), 'dude!'],
+            [new \stdClass, ''],
+            [new \SimpleXMLElement('<yo>dude!</yo>'), 'dude!'],
         ];
     }
 
@@ -39,7 +42,7 @@ class HelpersTest extends TestCase
      */
     public function testIsAssocArray($actual, $expected)
     {
-        $this->assertEquals($expected, is_assoc_array($actual));
+        $this->assertEquals($expected, Helper::is_assoc_array($actual));
     }
 
     /**
@@ -48,6 +51,6 @@ class HelpersTest extends TestCase
      */
     public function testStringify($actual, $expected)
     {
-        $this->assertEquals($expected, stringify($actual));
+        $this->assertEquals($expected, Helper::stringify($actual));
     }
 }

@@ -1,12 +1,14 @@
 <?php
 
+namespace SpanishGuestReportGenerator;
+
 use \PHPUnit\Framework\TestCase;
 
-include_once __DIR__.'/InvokeMethodTrait.php';
+include_once __DIR__.'/helpers/InvokeMethodTrait.php';
 
 class FormatterTraitImplementation
 {
-    use \SpanishGuestReportGenerator\FormatterTrait;
+    use FormatterTrait;
 }
 
 class FormatterTraitTest extends TestCase
@@ -23,11 +25,11 @@ class FormatterTraitTest extends TestCase
     public function dateTimeProvider()
     {
         return [
-            [new DateTime('2013-07-21 12:34'), ['date' => '20130721', 'time' => '1234']],
-            [new DateTime('2015-08-22 11:00'), ['date' => '20150822', 'time' => '1100']],
-            [new DateTime('2016-09-23 09:09'), ['date' => '20160923', 'time' => '0909']],
-            [new DateTime('2017-10-24 17:18'), ['date' => '20171024', 'time' => '1718']],
-            [new DateTime('2018-11-25 00:00'), ['date' => '20181125', 'time' => '0000']],
+            [new \DateTime('2013-07-21 12:34'), ['date' => '20130721', 'time' => '1234']],
+            [new \DateTime('2015-08-22 11:00'), ['date' => '20150822', 'time' => '1100']],
+            [new \DateTime('2016-09-23 09:09'), ['date' => '20160923', 'time' => '0909']],
+            [new \DateTime('2017-10-24 17:18'), ['date' => '20171024', 'time' => '1718']],
+            [new \DateTime('2018-11-25 00:00'), ['date' => '20181125', 'time' => '0000']],
         ];
     }
 

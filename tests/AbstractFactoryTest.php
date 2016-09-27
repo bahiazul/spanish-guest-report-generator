@@ -1,5 +1,7 @@
 <?php
 
+namespace SpanishGuestReportGenerator;
+
 use \PHPUnit\Framework\TestCase;
 
 /**
@@ -12,8 +14,12 @@ class ConcreteTestObject
     public $argThree;
     public $argFour;
 
-    public function __construct($argOne = '', $argTwo = '', $argThree = '', $argFour = '')
-    {
+    public function __construct(
+        $argOne   = '',
+        $argTwo   = '',
+        $argThree = '',
+        $argFour  = ''
+    ) {
         $this->argOne   = $argOne;
         $this->argTwo   = $argTwo;
         $this->argThree = $argThree;
@@ -26,7 +32,7 @@ class ConcreteTestObject
  */
 class ConcreteTestObjectFactory extends \SpanishGuestReportGenerator\AbstractFactory
 {
-    protected $className = 'ConcreteTestObject';
+    protected $className = '\SpanishGuestReportGenerator\ConcreteTestObject';
 
     protected $argsOrder = [
         'argOne',
@@ -53,7 +59,7 @@ class AbstractFactoryTest extends TestCase
      */
     public function testBuild()
     {
-        $this->assertInstanceOf('ConcreteTestObject', $this->factory->build());
+        $this->assertInstanceOf(ConcreteTestObject::class, $this->factory->build());
 
         $args = [
             'argOne'   => '1',
@@ -63,7 +69,7 @@ class AbstractFactoryTest extends TestCase
         ];
         $concreteTestObjectArgs = $this->factory->build($args);
 
-        $this->assertInstanceOf('ConcreteTestObject', $concreteTestObjectArgs);
+        $this->assertInstanceOf(ConcreteTestObject::class, $concreteTestObjectArgs);
         $this->assertEquals($args['argOne'], $concreteTestObjectArgs->argOne);
         $this->assertEquals($args['argTwo'], $concreteTestObjectArgs->argTwo);
         $this->assertEquals($args['argThree'], $concreteTestObjectArgs->argThree);
