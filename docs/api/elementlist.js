@@ -1,0 +1,3 @@
+
+var ApiGen = ApiGen || {};
+ApiGen.elements = [["c","SpanishGuestReportGenerator\\AbstractFactory"],["c","SpanishGuestReportGenerator\\FactoryException"],["c","SpanishGuestReportGenerator\\FormatterTrait"],["c","SpanishGuestReportGenerator\\Guest"],["c","SpanishGuestReportGenerator\\GuestFactory"],["c","SpanishGuestReportGenerator\\GuestReport"],["c","SpanishGuestReportGenerator\\GuestReportException"],["c","SpanishGuestReportGenerator\\Hotel"],["c","SpanishGuestReportGenerator\\HotelFactory"],["c","SpanishGuestReportGenerator\\SanitizerTrait"],["c","SpanishGuestReportGenerator\\Util\\Helper"]];

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class SpanishGuestReportGenerator\Guest</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-SpanishGuestReportGenerator.html">
+						SpanishGuestReportGenerator<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-SpanishGuestReportGenerator.Util.html">
+						Util					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-SpanishGuestReportGenerator.AbstractFactory.html">AbstractFactory</a></li>
+				<li class="active"><a href="class-SpanishGuestReportGenerator.Guest.html">Guest</a></li>
+				<li><a href="class-SpanishGuestReportGenerator.GuestFactory.html">GuestFactory</a></li>
+				<li><a href="class-SpanishGuestReportGenerator.GuestReport.html">GuestReport</a></li>
+				<li><a href="class-SpanishGuestReportGenerator.Hotel.html">Hotel</a></li>
+				<li><a href="class-SpanishGuestReportGenerator.HotelFactory.html">HotelFactory</a></li>
+			</ul>
+
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-SpanishGuestReportGenerator.FormatterTrait.html">FormatterTrait</a></li>
+				<li><a href="class-SpanishGuestReportGenerator.SanitizerTrait.html">SanitizerTrait</a></li>
+			</ul>
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-SpanishGuestReportGenerator.FactoryException.html">FactoryException</a></li>
+				<li><a href="class-SpanishGuestReportGenerator.GuestReportException.html">GuestReportException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-SpanishGuestReportGenerator.html" title="Summary of SpanishGuestReportGenerator"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Guest</h1>
+
+
+	<div class="description">
+	<p>Guest</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>SpanishGuestReportGenerator\Guest</span></b>			
+			
+			 uses 
+					<a href="class-SpanishGuestReportGenerator.FormatterTrait.html"><span>SpanishGuestReportGenerator\FormatterTrait</span></a>, 
+			
+					<a href="class-SpanishGuestReportGenerator.SanitizerTrait.html"><span>SpanishGuestReportGenerator\SanitizerTrait</span></a>
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-SpanishGuestReportGenerator.html">SpanishGuestReportGenerator</a><br>
+		<b>Package:</b> Spanish<br>
+
+				<b>Copyright:</b>
+				2016 Javier Zapata <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a><br>
+				<b>License:</b>
+				<a href="https://www.opensource.org/licenses/BSD-3-Clause">The BSD 3-Clause License</a><br>
+				<b>Author:</b>
+				Javier Zapata <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a><br>
+				<b>Link:</b>
+				<a href="https://github.com/nkm/spanish-guest-report-generator">https://github.com/nkm/spanish-guest-report-generator</a><br>
+			<b>Located at</b> <a href="source-class-SpanishGuestReportGenerator.Guest.html#14-323" title="Go to source code">Guest.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#112-151" title="Go to source code">__construct</a>( <span>boolean <var>$isSpanish</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$idNumber</var> = <span class="php-quote">''</span></span>, <span>string <var>$docType</var> = <span class="php-quote">''</span></span>, <span>string <var>$docIssueDate</var> = <span class="php-quote">''</span></span>, <span>string <var>$lastName1</var> = <span class="php-quote">''</span></span>, <span>string <var>$lastName2</var> = <span class="php-quote">''</span></span>, <span>string <var>$firstName</var> = <span class="php-quote">''</span></span>, <span>string <var>$gender</var> = <span class="php-quote">''</span></span>, <span>string <var>$birthDate</var> = <span class="php-quote">''</span></span>, <span>string <var>$countryName</var> = <span class="php-quote">''</span></span>, <span>string <var>$arrivalDate</var> = <span class="php-quote">''</span> </span> )</code>
+
+		<div class="description short">
+			<p>Create a new Guest</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a new Guest</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$isSpanish</var></dt>
+					<dd>Indicates if the guest is a spanish resident</dd>
+					<dt><var>$idNumber</var></dt>
+					<dd>ID number that appears in the document</dd>
+					<dt><var>$docType</var></dt>
+					<dd>Letter identifying the type</dd>
+					<dt><var>$docIssueDate</var></dt>
+					<dd>Expiration date of the document</dd>
+					<dt><var>$lastName1</var></dt>
+					<dd>First last name</dd>
+					<dt><var>$lastName2</var></dt>
+					<dd>Second last name (only required for spaniards)</dd>
+					<dt><var>$firstName</var></dt>
+					<dd>First name</dd>
+					<dt><var>$gender</var></dt>
+					<dd>Letter identifying the gender</dd>
+					<dt><var>$birthDate</var></dt>
+					<dd>Date of birth</dd>
+					<dt><var>$countryName</var></dt>
+					<dd>Name of the country</dd>
+					<dt><var>$arrivalDate</var></dt>
+					<dd>Date of arrival</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setIsSpanish" id="_setIsSpanish">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setIsSpanish">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#153-164" title="Go to source code">setIsSpanish</a>( <span>boolean <var>$isSpanish</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets wether or not the guest is a Spanish citizen</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets wether or not the guest is a Spanish citizen</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$isSpanish</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setIDNumber" id="_setIDNumber">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setIDNumber">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#166-181" title="Go to source code">setIDNumber</a>( <span>string <var>$idNumber</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the ID number</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the ID number</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$idNumber</var></dt>
+					<dd>ID Number</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDocType" id="_setDocType">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDocType">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#183-194" title="Go to source code">setDocType</a>( <span>string <var>$docType</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the document type</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the document type</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$docType</var></dt>
+					<dd>Letter identifying the type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDocIssueDate" id="_setDocIssueDate">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDocIssueDate">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#196-207" title="Go to source code">setDocIssueDate</a>( <span>string <var>$date</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the document issue date</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the document issue date</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$date</var></dt>
+					<dd>The date</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLastName1" id="_setLastName1">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLastName1">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#209-220" title="Go to source code">setLastName1</a>( <span>string <var>$lastName1</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the first last name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the first last name</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lastName1</var></dt>
+					<dd>First last name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLastName2" id="_setLastName2">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLastName2">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#222-233" title="Go to source code">setLastName2</a>( <span>string <var>$lastName2</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the second last name (only required for spanish citizens)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the second last name (only required for spanish citizens)</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lastName2</var></dt>
+					<dd>Second last name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFirstName" id="_setFirstName">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFirstName">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#235-246" title="Go to source code">setFirstName</a>( <span>string <var>$firstName</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the first name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the first name</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$firstName</var></dt>
+					<dd>First name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setGender" id="_setGender">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setGender">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#248-259" title="Go to source code">setGender</a>( <span>string <var>$gender</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the gender</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the gender</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$gender</var></dt>
+					<dd>Letter identifying the gender</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBirthDate" id="_setBirthDate">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBirthDate">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#261-272" title="Go to source code">setBirthDate</a>( <span>string <var>$date</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the birth date</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the birth date</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$date</var></dt>
+					<dd>Birth date</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCountryName" id="_setCountryName">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCountryName">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#274-285" title="Go to source code">setCountryName</a>( <span>string <var>$countryName</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the country name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the country name</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$countryName</var></dt>
+					<dd>Country name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setArrivalDate" id="_setArrivalDate">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setArrivalDate">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#287-298" title="Go to source code">setArrivalDate</a>( <span>string <var>$date</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the arrival date</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the arrival date</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$date</var></dt>
+					<dd>Arrival date</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-SpanishGuestReportGenerator.Guest.html">SpanishGuestReportGenerator\Guest</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCols" id="_getCols">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCols">#</a>
+		<code><a href="source-class-SpanishGuestReportGenerator.Guest.html#300-322" title="Go to source code">getCols</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the data for this object</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the data for this object</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ROW_TYPE" id="ROW_TYPE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-SpanishGuestReportGenerator.Guest.html#28-33" title="Go to source code"><b>ROW_TYPE</b></a>
+			</code>
+
+			<div class="description short">
+				<p>First digit for the Guest info line</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>First digit for the Guest info line</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ROW_TYPE" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
