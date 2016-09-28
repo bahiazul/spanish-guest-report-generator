@@ -169,7 +169,7 @@ class GuestReport
             $reportNumber = 1;
         }
 
-        $this->reportNumber = str_pad(strval($reportNumber), 3, '0', STR_PAD_LEFT);
+        $this->reportNumber = str_pad((string) $reportNumber, 3, '0', STR_PAD_LEFT);
 
         return $this;
     }
