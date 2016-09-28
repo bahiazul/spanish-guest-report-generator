@@ -5,6 +5,8 @@ Spanish Guest Report Generator
 [![Latest Stable Version](https://poser.pugx.org/nkm/spanish-guest-report-generator/v/stable)](https://packagist.org/packages/nkm/spanish-guest-report-generator)
 [![Total Downloads](https://poser.pugx.org/nkm/spanish-guest-report-generator/downloads)](https://packagist.org/packages/nkm/spanish-guest-report-generator)
 [![Latest Unstable Version](https://poser.pugx.org/nkm/spanish-guest-report-generator/v/unstable)](https://packagist.org/packages/nkm/spanish-guest-report-generator)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nkm/spanish-guest-report-generator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nkm/spanish-guest-report-generator/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/nkm/spanish-guest-report-generator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/nkm/spanish-guest-report-generator/?branch=master)
 [![License](https://poser.pugx.org/nkm/spanish-guest-report-generator/license)](https://packagist.org/packages/nkm/spanish-guest-report-generator)
 
 **Spanish Guest Report Generator** is an utility for hotels and other hospitality establishments to generate a report of all its newly arrived guests, that must be handed daily to the Spanish National Police or Civil Guard, as mandated by law.
@@ -28,6 +30,10 @@ Usage
 
 See `sample/index.php`.
 
+API docs
+--------
+
+http://javi.io/spanish-guest-report-generator/
 
 Test
 ----
