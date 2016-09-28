@@ -4,11 +4,9 @@ namespace SpanishGuestReportGenerator;
 
 include_once __DIR__.'/helpers/InvokeMethodTrait.php';
 
-class SanitizerTraitImplementation
-{
-    use SanitizerTrait;
-}
-
+/**
+ * @coversDefaultClass \SpanishGuestReportGenerator\SanitizerTrait
+ */
 class SanitizerTraitTest extends \PHPUnit_Framework_TestCase
 {
     use \InvokeMethodTrait;
@@ -17,7 +15,19 @@ class SanitizerTraitTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->traitObject = new SanitizerTraitImplementation();
+        $this->traitObject = $this->createObjectForTrait();
+    }
+
+    /**
+     * *Creation Method* to create an object for the trait under test.
+     *
+     * @return object The newly created object.
+     */
+    private function createObjectForTrait()
+    {
+        $traitName = __NAMESPACE__ . '\SanitizerTrait';
+
+        return $this->getObjectForTrait($traitName);
     }
 
     public function genderProvider()

@@ -1,6 +1,7 @@
 <?php
 
 namespace SpanishGuestReportGenerator;
+
 use \org\bovigo\vfs\vfsStream;
 use \org\bovigo\vfs\vfsStreamWrapper;
 use \org\bovigo\vfs\vfsStreamDirectory;
@@ -318,27 +319,6 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers ::getContents
-     */
-    public function testGetContents()
-    {
-        $this->gr
-        ->setReportNumber($this->reportNumber)
-        ->setChain(
-            $this->chainCode,
-            $this->chainName,
-            $this->dt,
-            $this->hotels
-        );
-
-        $rc = new \ReflectionClass($this->gr);
-        $rm = $rc->getMethod('getContents');
-        $rm->setAccessible(true);
-
-        $this->assertEquals($this->expectedContents, $rm->invoke($this->gr));
-    }
-
-    /**
      * @covers ::setDirectoryPath
      */
     public function testSetDirectoryPath()
@@ -369,8 +349,10 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
      */
     public function testSave()
     {
+        $basePath = $this->rootPath.'/'.$this->directoryPath;
+
         $this->gr
-        ->setDirectoryPath(vfsStream::url($this->rootPath.'/'.$this->directoryPath))
+        ->setDirectoryPath(vfsStream::url($basePath))
         ->setReportNumber($this->reportNumber)
         ->setChain(
             $this->chainCode,
@@ -381,6 +363,9 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
         ->save();
 
         $this->assertTrue(vfsStreamWrapper::getRoot()->hasChild($this->directoryPath.'/'.$this->filename));
+
+        $actualContents = file_get_contents(vfsStream::url($basePath.'/'.$this->filename));
+        $this->assertEquals($this->expectedContents, $actualContents);
     }
 
     /**
