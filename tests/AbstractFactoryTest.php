@@ -2,6 +2,8 @@
 
 namespace SpanishGuestReportGenerator;
 
+use \PHPUnit\Framework\TestCase;
+
 /**
  * @coversDefaultClass \SpanishGuestReportGenerator\AbstractFactory
  */
@@ -28,7 +30,7 @@ class ConcreteTestObject
 /**
  * @coversDefaultClass \SpanishGuestReportGenerator\AbstractFactory
  */
-class ConcreteTestObjectFactory extends AbstractFactory
+class ConcreteTestObjectFactory extends \SpanishGuestReportGenerator\AbstractFactory
 {
     protected $className = '\SpanishGuestReportGenerator\ConcreteTestObject';
 
@@ -43,7 +45,7 @@ class ConcreteTestObjectFactory extends AbstractFactory
 /**
  * @coversDefaultClass \SpanishGuestReportGenerator\AbstractFactory
  */
-class AbstractFactoryTest extends \PHPUnit_Framework_TestCase
+class AbstractFactoryTest extends TestCase
 {
     private $factory;
 

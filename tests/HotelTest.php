@@ -2,10 +2,12 @@
 
 namespace SpanishGuestReportGenerator;
 
+use \PHPUnit\Framework\TestCase;
+
 /**
  * @coversDefaultClass \SpanishGuestReportGenerator\Hotel
  */
-class HotelTest extends \PHPUnit_Framework_TestCase
+class HotelTest extends TestCase
 {
     private $h;
 

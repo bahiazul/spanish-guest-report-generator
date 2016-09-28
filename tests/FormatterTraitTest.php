@@ -2,6 +2,8 @@
 
 namespace SpanishGuestReportGenerator;
 
+use \PHPUnit\Framework\TestCase;
+
 include_once __DIR__.'/helpers/InvokeMethodTrait.php';
 
 class FormatterTraitImplementation
@@ -9,7 +11,7 @@ class FormatterTraitImplementation
     use FormatterTrait;
 }
 
-class FormatterTraitTest extends \PHPUnit_Framework_TestCase
+class FormatterTraitTest extends TestCase
 {
     use \InvokeMethodTrait;
 
