@@ -51,6 +51,10 @@ $ phpunit
 Changelog
 ---------
 
+### Version 1.0.1 (28 September 2016)
+
+Minor fixes and improvements
+
 ### Version 1.0.0 (27 September 2016)
 
 Initial release
