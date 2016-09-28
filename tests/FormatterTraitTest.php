@@ -4,9 +4,11 @@ namespace SpanishGuestReportGenerator;
 
 include_once __DIR__.'/helpers/InvokeMethodTrait.php';
 
-/**
- * @coversDefaultClass \SpanishGuestReportGenerator\FormatterTrait
- */
+class FormatterTraitImplementation
+{
+    use FormatterTrait;
+}
+
 class FormatterTraitTest extends \PHPUnit_Framework_TestCase
 {
     use \InvokeMethodTrait;
@@ -15,19 +17,7 @@ class FormatterTraitTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->traitObject = $this->createObjectForTrait();
-    }
-
-    /**
-     * *Creation Method* to create an object for the trait under test.
-     *
-     * @return object The newly created object.
-     */
-    private function createObjectForTrait()
-    {
-        $traitName = __NAMESPACE__ . '\FormatterTrait';
-
-        return $this->getObjectForTrait($traitName);
+        $this->traitObject = new FormatterTraitImplementation();
     }
 
     public function dateTimeProvider()
