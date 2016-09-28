@@ -57,10 +57,7 @@ class AbstractFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testBuild()
     {
-        $this->assertInstanceOf(
-            '\SpanishGuestReportGenerator\ConcreteTestObject',
-            $this->factory->build()
-        );
+        $this->assertInstanceOf(ConcreteTestObject::class, $this->factory->build());
 
         $args = [
             'argOne'   => '1',
@@ -70,10 +67,7 @@ class AbstractFactoryTest extends \PHPUnit_Framework_TestCase
         ];
         $concreteTestObjectArgs = $this->factory->build($args);
 
-        $this->assertInstanceOf(
-            '\SpanishGuestReportGenerator\ConcreteTestObject',
-            $concreteTestObjectArgs
-        );
+        $this->assertInstanceOf(ConcreteTestObject::class, $concreteTestObjectArgs);
         $this->assertEquals($args['argOne'], $concreteTestObjectArgs->argOne);
         $this->assertEquals($args['argTwo'], $concreteTestObjectArgs->argTwo);
         $this->assertEquals($args['argThree'], $concreteTestObjectArgs->argThree);
