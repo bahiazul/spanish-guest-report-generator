@@ -207,7 +207,7 @@ class GuestTest extends TestCase
     }
 
     /**
-     * @covers  ::testSetBirthDate
+     * @covers  ::setBirthDate
      */
     public function testSetBirthDate()
     {
