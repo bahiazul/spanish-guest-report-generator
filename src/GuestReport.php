@@ -158,7 +158,7 @@ class GuestReport
     /**
      * Sets the report number
      *
-     * @param   integer $reportNumber Report number
+     * @param   mixed $reportNumber Report number
      * @return  GuestReport
      */
     public function setReportNumber($reportNumber)
@@ -169,7 +169,9 @@ class GuestReport
             $reportNumber = 1;
         }
 
-        $this->reportNumber = str_pad((string) $reportNumber, 3, '0', STR_PAD_LEFT);
+        $reportNumber = strval($reportNumber);
+
+        $this->reportNumber = str_pad($reportNumber, 3, '0', STR_PAD_LEFT);
 
         return $this;
     }
