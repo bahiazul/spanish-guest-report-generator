@@ -171,11 +171,9 @@ class Guest
      */
     public function setIDNumber($idNumber)
     {
-        $methodName = $this->isSpanish
-                    ? 'sanitizeSpanishID'
-                    : 'sanitizeForeignID';
-
-        $this->idNumber = $this->{$methodName}($idNumber);
+        $this->idNumber = $this->isSpanish
+                        ? $this->sanitizeSpanishID($idNumber)
+                        : $this->sanitizeForeignID($idNumber);
 
         return $this;
     }

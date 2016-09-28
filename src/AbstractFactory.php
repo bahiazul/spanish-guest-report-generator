@@ -64,7 +64,7 @@ abstract class AbstractFactory
      */
     final public function build(array $args = [])
     {
-        if ($args && !Helper::is_assoc_array($args)) {
+        if (!empty($args) && !Helper::is_assoc_array($args)) {
             throw new FactoryException("`args` should be an associative array indexed by the property names of the class to be built.");
         }
 

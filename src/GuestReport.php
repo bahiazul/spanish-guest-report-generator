@@ -145,7 +145,7 @@ class GuestReport
     /**
      * Sets the Chain's name
      *
-     * @param   string $chainCode Chain name
+     * @param   string $chainName Chain name
      * @return  GuestReport
      */
     public function setChainName($chainName)
@@ -169,7 +169,7 @@ class GuestReport
             $reportNumber = 1;
         }
 
-        $this->reportNumber = str_pad($reportNumber, 3, '0', STR_PAD_LEFT);
+        $this->reportNumber = str_pad(strval($reportNumber), 3, '0', STR_PAD_LEFT);
 
         return $this;
     }
@@ -363,7 +363,7 @@ class GuestReport
      */
     private function getContents()
     {
-        $lines = array_map('self::rowToLine', $this->getRows());
+        $lines = array_map(function($cols){ return self::rowToLine($cols); }, $this->getRows());
 
         $contents = implode(self::FILE_NEWLINE, $lines);
         $contents = iconv(mb_internal_encoding(), self::FILE_ENCODING.'//TRANSLIT', $contents);

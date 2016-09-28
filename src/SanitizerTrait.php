@@ -113,11 +113,12 @@ trait SanitizerTrait
     {
         $date = Helper::stringify($date);
 
+        $matches = [];
         foreach (self::$dateFormats as $pattern) {
             if (preg_match($pattern, $date, $matches)) break;
         }
 
-        return $matches
+        return !empty($matches)
              ? $matches['y'].$matches['m'].$matches['d']
              : '00000000';
     }
@@ -208,7 +209,7 @@ trait SanitizerTrait
      * Sanitizes the length of a string
      *
      * @param   string  $string     String to sanitize
-     * @param   int     $max        Maximum length allowed
+     * @param   int     $length     Maximum length allowed
      */
     private function sanitizeLength($string, $length)
     {

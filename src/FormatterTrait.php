@@ -40,7 +40,6 @@ trait FormatterTrait
      * Format a given DateTime into a date string
      *
      * @param  \DateTime $date   Date to format
-     * @param  string    $format Format in which to format the Date
      * @return string
      */
     private function formatDate(\DateTime $date)
@@ -52,7 +51,6 @@ trait FormatterTrait
      * Format a given DateTime into a time string
      *
      * @param  \DateTime $date   Date to format
-     * @param  string    $format Format in which to format the Date
      * @return string
      */
     private function formatTime(\DateTime $date)
