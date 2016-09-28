@@ -9,6 +9,9 @@ use \PHPUnit\Framework\TestCase;
  */
 class HelpersTest extends TestCase
 {
+    /**
+     * @codeCoverageIgnore
+     */
     public function isAssocArrayProvider()
     {
         return [
@@ -20,6 +23,9 @@ class HelpersTest extends TestCase
         ];
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function stringifyProvider()
     {
         return [

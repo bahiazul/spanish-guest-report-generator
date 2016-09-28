@@ -6,15 +6,18 @@
          strict="true"
          verbose="false">
 
-     <testsuites>
-      <testsuite name="Spanish Guest Report Generator">
-       <directory>tests</directory>
-      </testsuite>
-     </testsuites>
+  <testsuites>
+    <testsuite name="Spanish Guest Report Generator">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
 
-     <filter>
-      <whitelist addUncoveredFilesFromWhitelist="true">
-       <directory>src</directory>
-      </whitelist>
-     </filter>
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true">
+      <directory>src</directory>
+    </whitelist>
+    <blacklist>
+      <directory suffix="Exception.php">src</directory>
+    </blacklist>
+  </filter>
 </phpunit>

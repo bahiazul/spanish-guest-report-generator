@@ -5,7 +5,7 @@ namespace SpanishGuestReportGenerator;
 use \PHPUnit\Framework\TestCase;
 
 /**
- * @coversDefaultClass \SpanishGuestReportGenerator\AbstractFactory
+ * @codeCoverageIgnore
  */
 class ConcreteTestObject
 {
@@ -28,7 +28,7 @@ class ConcreteTestObject
 }
 
 /**
- * @coversDefaultClass \SpanishGuestReportGenerator\AbstractFactory
+ * @codeCoverageIgnore
  */
 class ConcreteTestObjectFactory extends \SpanishGuestReportGenerator\AbstractFactory
 {

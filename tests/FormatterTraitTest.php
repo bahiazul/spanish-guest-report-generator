@@ -24,6 +24,8 @@ class FormatterTraitTest extends TestCase
      * *Creation Method* to create an object for the trait under test.
      *
      * @return object The newly created object.
+     *
+     * @codeCoverageIgnore
      */
     private function createObjectForTrait()
     {

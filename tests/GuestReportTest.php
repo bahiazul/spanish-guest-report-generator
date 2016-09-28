@@ -380,6 +380,8 @@ class GuestReportTest extends TestCase
  * @param string $path  the file path
  *
  * @return string
+ *
+ * @codeCoverageIgnore
  */
 function realpath($path)
 {
