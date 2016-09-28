@@ -3,8 +3,21 @@ language: php
 php:
   - 5.6
   - hhvm
+  - nightly
 
-install:
-  - composer install
+matrix:
+  allow_failures:
+    - php: hhvm
+    - php: nightly
 
-script: phpunit -c phpunit.xml.dist
+
+before_script:
+  - composer install --dev --prefer-source
+
+script:
+  - vendor/bin/phpunit --coverage-clover=coverage.clover
+
+# only send coverage for PHP 5.6
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
