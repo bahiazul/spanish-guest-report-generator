@@ -364,11 +364,8 @@ class GuestReportTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue(vfsStreamWrapper::getRoot()->hasChild($this->directoryPath.'/'.$this->filename));
 
-        $actualContents   = file_get_contents(vfsStream::url($basePath.'/'.$this->filename));
-        $actualContents   = iconv('CP437', mb_internal_encoding(), $actualContents);
-        $expectedContents = iconv('CP437', mb_internal_encoding(), $this->expectedContents);
-
-        $this->assertEquals($expectedContents, $actualContents);
+        $actualContents = file_get_contents(vfsStream::url($basePath.'/'.$this->filename));
+        $this->assertEquals($this->expectedContents, $actualContents);
     }
 
     /**
