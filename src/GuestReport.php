@@ -163,15 +163,18 @@ class GuestReport
      */
     public function setReportNumber($reportNumber)
     {
-        $reportNumber = intval($reportNumber);
+        // Clean any nasty input
+        $reportNumber = Helper::stringify($reportNumber);
 
-        if ($reportNumber < 1 || $reportNumber > 999) {
-            $reportNumber = 1;
+        // Reset any out of range numbers
+        if ((int) $reportNumber < 1 || (int) $reportNumber > 999) {
+            $reportNumber = '1';
         }
 
-        $reportNumber = strval($reportNumber);
+        // Get rid of floats
+        $reportNumber = intval($reportNumber);
 
-        $this->reportNumber = str_pad($reportNumber, 3, '0', STR_PAD_LEFT);
+        $this->reportNumber = str_pad((string) $reportNumber, 3, '0', STR_PAD_LEFT);
 
         return $this;
     }
