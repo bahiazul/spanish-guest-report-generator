@@ -51,6 +51,11 @@ $ phpunit
 Changelog
 ---------
 
+### Version 1.1.0 (29 September 2016)
+
+Set `GuestReport::getFilename()` method public
+
+
 ### Version 1.0.1 (28 September 2016)
 
 Minor fixes and improvements

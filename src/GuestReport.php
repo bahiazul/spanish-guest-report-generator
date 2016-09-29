@@ -311,32 +311,11 @@ class GuestReport
     }
 
     /**
-     * Save the report to a file
-     *
-     * @param   boolean $overwrite  Overwrite the file if already exists
-     * @return  boolean             Whether the file was succesfully saved
-     * @throws  GuestReportException
-     */
-    public function save($overwrite = true)
-    {
-        $filename  = realpath($this->directoryPath); // Fallback to the current directory
-        $filename .= '/'.$this->getFilename();
-
-        if (file_exists($filename) && !$overwrite) {
-            throw new GuestReportException("File `{$filename}` already exists.");
-        }
-
-        $data = $this->getContents();
-
-        return (bool) file_put_contents($filename, $data);
-    }
-
-    /**
      * Returns the output filename
      *
      * @return string Output filename
      */
-    private function getFilename()
+    public function getFilename()
     {
         switch (count($this->hotels)) {
             case 0:
@@ -356,6 +335,27 @@ class GuestReport
         }
 
         return $filename.'.'.$this->reportNumber;
+    }
+
+    /**
+     * Save the report to a file
+     *
+     * @param   boolean $overwrite  Overwrite the file if already exists
+     * @return  boolean             Whether the file was succesfully saved
+     * @throws  GuestReportException
+     */
+    public function save($overwrite = true)
+    {
+        $filename  = realpath($this->directoryPath); // Fallback to the current directory
+        $filename .= '/'.$this->getFilename();
+
+        if (file_exists($filename) && !$overwrite) {
+            throw new GuestReportException("File `{$filename}` already exists.");
+        }
+
+        $data = $this->getContents();
+
+        return (bool) file_put_contents($filename, $data);
     }
 
     /**

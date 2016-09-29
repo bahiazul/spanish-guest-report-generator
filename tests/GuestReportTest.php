@@ -372,6 +372,48 @@ class GuestReportTest extends TestCase
         )
         ->save(false);
     }
+
+    /**
+     * @covers ::getFilename
+     */
+    public function testGetFilename()
+    {
+        // Nothing yet set
+        $this->assertEquals('EMPTY.999', $this->gr->getFilename());
+
+        // Only report number set
+        $this->gr->setReportNumber($this->reportNumber);
+        $this->assertEquals(
+            'EMPTY.'.$this->reportNumber,
+            $this->gr->getFilename()
+        );
+
+        // Single Hotel set
+        $this->gr->setHotel(
+            $this->hotels[0]['hotelCode'],
+            $this->hotels[0]['hotelName']
+        );
+        $this->assertEquals(
+            $this->hotels[0]['hotelCode'].'.'.$this->reportNumber,
+            $this->gr->getFilename()
+        );
+
+        // Multiple hotels set but no Chain code
+        $this->gr->setHotels($this->hotels);
+        $this->assertEquals(
+            'NONAME.'.$this->reportNumber,
+            $this->gr->getFilename()
+        );
+
+        // Multiple hotels with Chain info set
+        $this->gr
+        ->setChainCode($this->chainCode)
+        ->setChainName($this->chainName);
+        $this->assertEquals(
+            $this->chainCode.'.'.$this->reportNumber,
+            $this->gr->getFilename()
+        );
+    }
 }
 
 /**
