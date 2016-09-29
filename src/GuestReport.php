@@ -65,7 +65,7 @@ class GuestReport
     /**
      * Sequential number of the document to generate (1-999)
      *
-     * @var integer
+     * @var string
      */
     private $reportNumber = '999';
 
@@ -164,19 +164,20 @@ class GuestReport
     public function setReportNumber($reportNumber)
     {
         // Clean any nasty input
-        $rnString = Helper::stringify($reportNumber);
+        $reportNumber = Helper::stringify($reportNumber);
 
         // Get rid of floats
-        $rnInt = intval($rnString);
+        $reportNumber = intval($reportNumber);
 
         // Reset any out of range numbers
-        if ($rnInt < 1 || $rnInt > 999) {
-            $rnInt = 1;
+        if ($reportNumber < 1 || $reportNumber > 999) {
+            $reportNumber = 1;
         }
 
-        $rnString = strval($rnInt);
+        // Convert back to string
+        $reportNumber = strval($reportNumber);
 
-        $this->reportNumber = str_pad($rnString, 3, '0', STR_PAD_LEFT);
+        $this->reportNumber = str_pad($reportNumber, 3, '0', STR_PAD_LEFT);
 
         return $this;
     }
