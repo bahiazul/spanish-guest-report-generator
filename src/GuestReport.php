@@ -172,9 +172,9 @@ class GuestReport
         }
 
         // Get rid of floats
-        $reportNumber = intval($reportNumber);
+        $reportNumber = strval(intval($reportNumber));
 
-        $this->reportNumber = str_pad((string) $reportNumber, 3, '0', STR_PAD_LEFT);
+        $this->reportNumber = str_pad($reportNumber, 3, '0', STR_PAD_LEFT);
 
         return $this;
     }
