@@ -1,763 +1,1173 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-
-	<title>Class SpanishGuestReportGenerator\GuestReport</title>
-
-	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
-
-</head>
-
-<body>
-<div id="left">
-	<div id="menu">
-		<a href="index.html" title="Overview"><span>Overview</span></a>
-
-
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-				<li class="active">
-					<a href="namespace-SpanishGuestReportGenerator.html">
-						SpanishGuestReportGenerator<span></span>
-					</a>
-
-						<ul>
-				<li>
-					<a href="namespace-SpanishGuestReportGenerator.Util.html">
-						Util					</a>
-
-						</li>
-							</ul></li>
-			</ul>
-		</div>
-
-		<hr>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li><a href="class-SpanishGuestReportGenerator.AbstractFactory.html">AbstractFactory</a></li>
-				<li><a href="class-SpanishGuestReportGenerator.Guest.html">Guest</a></li>
-				<li><a href="class-SpanishGuestReportGenerator.GuestFactory.html">GuestFactory</a></li>
-				<li class="active"><a href="class-SpanishGuestReportGenerator.GuestReport.html">GuestReport</a></li>
-				<li><a href="class-SpanishGuestReportGenerator.Hotel.html">Hotel</a></li>
-				<li><a href="class-SpanishGuestReportGenerator.HotelFactory.html">HotelFactory</a></li>
-			</ul>
-
-
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-SpanishGuestReportGenerator.FormatterTrait.html">FormatterTrait</a></li>
-				<li><a href="class-SpanishGuestReportGenerator.SanitizerTrait.html">SanitizerTrait</a></li>
-			</ul>
-
-			<h3>Exceptions</h3>
-			<ul>
-				<li><a href="class-SpanishGuestReportGenerator.FactoryException.html">FactoryException</a></li>
-				<li><a href="class-SpanishGuestReportGenerator.GuestReportException.html">GuestReportException</a></li>
-			</ul>
-
-
-		</div>
-	</div>
-</div>
-
-<div id="splitter"></div>
-
-<div id="right">
-<div id="rightInner">
-	<form id="search">
-		<input type="hidden" name="cx" value="">
-		<input type="hidden" name="ie" value="UTF-8">
-		<input type="text" name="q" class="text" placeholder="Search">
-	</form>
-
-	<div id="navigation">
-		<ul>
-			<li>
-				<a href="index.html" title="Overview"><span>Overview</span></a>
-			</li>
-			<li>
-				<a href="namespace-SpanishGuestReportGenerator.html" title="Summary of SpanishGuestReportGenerator"><span>Namespace</span></a>
-			</li>
-			<li class="active">
-<span>Class</span>			</li>
-		</ul>
-		<ul>
-		</ul>
-		<ul>
-		</ul>
-	</div>
-
-<div id="content" class="class">
-	<h1>Class GuestReport</h1>
-
-
-	<div class="description">
-	<p>Guest Report</p>
-	</div>
-
-	<dl class="tree">
-		<dd style="padding-left:0px">
-<b><span>SpanishGuestReportGenerator\GuestReport</span></b>			
-			
-			 uses 
-					<a href="class-SpanishGuestReportGenerator.FormatterTrait.html"><span>SpanishGuestReportGenerator\FormatterTrait</span></a>, 
-			
-					<a href="class-SpanishGuestReportGenerator.SanitizerTrait.html"><span>SpanishGuestReportGenerator\SanitizerTrait</span></a>
-			
-		</dd>
-	</dl>
-
-
-
-
-
-
-
-
-	<div class="info">
-		
-		
-		<b>Namespace:</b> <a href="namespace-SpanishGuestReportGenerator.html">SpanishGuestReportGenerator</a><br>
-		<b>Package:</b> Spanish<br>
-
-				<b>Copyright:</b>
-				2016 Javier Zapata <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a><br>
-				<b>License:</b>
-				<a href="https://www.opensource.org/licenses/BSD-3-Clause">The BSD 3-Clause License</a><br>
-				<b>Author:</b>
-				Javier Zapata <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a><br>
-				<b>Link:</b>
-				<a href="https://github.com/nkm/spanish-guest-report-generator">https://github.com/nkm/spanish-guest-report-generator</a><br>
-			<b>Located at</b> <a href="source-class-SpanishGuestReportGenerator.GuestReport.html#16-431" title="Go to source code">GuestReport.php</a>
-		<br>
-	</div>
-
-
-
-	<table class="summary methods" id="methods">
-	<caption>Methods summary</caption>
-	<tr data-order="__construct" id="___construct">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#114-130" title="Go to source code">__construct</a>( <span><code><a href="class-SpanishGuestReportGenerator.HotelFactory.html">SpanishGuestReportGenerator\HotelFactory</a></code> <var>$hotelFactory</var></span>, <span><code><a href="class-SpanishGuestReportGenerator.GuestFactory.html">SpanishGuestReportGenerator\GuestFactory</a></code> <var>$guestFactory</var></span>, <span>DateTime <var>$reportDateTime</var> = <span class="php-keyword1">null</span> </span> )</code>
-
-		<div class="description short">
-			<p>Creates a new report</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Creates a new report</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$hotelFactory</var></dt>
-					<dd>Hotel creator class</dd>
-					<dt><var>$guestFactory</var></dt>
-					<dd>Guest creator class</dd>
-					<dt><var>$reportDateTime</var></dt>
-					<dd>Date and time of the report</dd>
-				</dl></div>
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setChainCode" id="_setChainCode">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setChainCode">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#132-143" title="Go to source code">setChainCode</a>( <span>string <var>$chainCode</var></span> )</code>
-
-		<div class="description short">
-			<p>Sets the Chain's code</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Sets the Chain's code</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$chainCode</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setChainName" id="_setChainName">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setChainName">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#145-156" title="Go to source code">setChainName</a>( <span>string <var>$chainName</var></span> )</code>
-
-		<div class="description short">
-			<p>Sets the Chain's name</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Sets the Chain's name</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$chainName</var></dt>
-					<dd>Chain name</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setReportNumber" id="_setReportNumber">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setReportNumber">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#158-183" title="Go to source code">setReportNumber</a>( <span>mixed <var>$reportNumber</var></span> )</code>
-
-		<div class="description short">
-			<p>Sets the report number</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Sets the report number</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$reportNumber</var></dt>
-					<dd>Report number</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setReportDateTime" id="_setReportDateTime">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setReportDateTime">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#185-196" title="Go to source code">setReportDateTime</a>( <span>DateTime <var>$reportDateTime</var></span> )</code>
-
-		<div class="description short">
-			<p>Sets the Date and time of the report</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Sets the Date and time of the report</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$reportDateTime</var></dt>
-					<dd>Date and time of the report</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setChain" id="_setChain">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setChain">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#198-215" title="Go to source code">setChain</a>( <span>string <var>$chainCode</var></span>, <span>string <var>$chainName</var></span>, <span>DateTime <var>$reportDateTime</var></span>, <span>array <var>$hotels</var> = []</span> )</code>
-
-		<div class="description short">
-			<p>Sets the info and contents for the Chain</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Sets the info and contents for the Chain</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$chainCode</var></dt>
-					<dd>Code of the Chain</dd>
-					<dt><var>$chainName</var></dt>
-					<dd>Name of the Chain</dd>
-					<dt><var>$reportDateTime</var></dt>
-					<dd>Date and Time of report</dd>
-					<dt><var>$hotels</var></dt>
-					<dd>Hotels that belong to this Chain</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setHotels" id="_setHotels">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setHotels">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#217-237" title="Go to source code">setHotels</a>( <span>array <var>$hotels</var></span> )</code>
-
-		<div class="description short">
-			<p>Set multiple Hotels at once</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Set multiple Hotels at once</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$hotels</var></dt>
-					<dd>Hotels</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setHotel" id="_setHotel">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setHotel">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#239-263" title="Go to source code">setHotel</a>( <span>string <var>$hotelCode</var></span>, <span>string <var>$hotelName</var></span>, <span>DateTime <var>$reportDateTime</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$guests</var> = [] </span> )</code>
-
-		<div class="description short">
-			<p>Sets the info and contents for a single Hotel</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Sets the info and contents for a single Hotel</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$hotelCode</var></dt>
-					<dd>Code of the Hotel</dd>
-					<dt><var>$hotelName</var></dt>
-					<dd>Name of the Hotel</dd>
-					<dt><var>$reportDateTime</var></dt>
-					<dd>Date and Time of report</dd>
-					<dt><var>$guests</var></dt>
-					<dd>Guests that belong to this Hotel</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setHotelGuests" id="_setHotelGuests">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setHotelGuests">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#265-284" title="Go to source code">setHotelGuests</a>( <span>string <var>$hotelCode</var></span>, <span>array <var>$guests</var></span> )</code>
-
-		<div class="description short">
-			<p>Set the Guests for a specific Hotel</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Set the Guests for a specific Hotel</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$hotelCode</var></dt>
-					<dd>Code of the Hotel</dd>
-					<dt><var>$guests</var></dt>
-					<dd>Guests that belong to this Hotel</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-				<h4>Throws</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReportException.html">SpanishGuestReportGenerator\GuestReportException</a></code>
-				</div>
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="setDirectoryPath" id="_setDirectoryPath">
-
-		<td class="attributes"><code>
-			 public 
-
-			<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_setDirectoryPath">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#286-317" title="Go to source code">setDirectoryPath</a>( <span>string <var>$path</var></span>, <span>boolean <var>$create</var> = <span class="php-keyword1">true</span></span> )</code>
-
-		<div class="description short">
-			<p>Sets the path in which the generated file will be saved</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Sets the path in which the generated file will be saved</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$path</var></dt>
-					<dd>Destination path</dd>
-					<dt><var>$create</var></dt>
-					<dd>Create the path if it does not exist</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReport.html">SpanishGuestReportGenerator\GuestReport</a></code>
-				</div>
-
-				<h4>Throws</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReportException.html">SpanishGuestReportGenerator\GuestReportException</a></code>
-				</div>
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="getFilename" id="_getFilename">
-
-		<td class="attributes"><code>
-			 public 
-
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_getFilename">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#319-344" title="Go to source code">getFilename</a>( )</code>
-
-		<div class="description short">
-			<p>Returns the output filename</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Returns the output filename</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					string<br>Output filename
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="save" id="_save">
-
-		<td class="attributes"><code>
-			 public 
-
-			boolean
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_save">#</a>
-		<code><a href="source-class-SpanishGuestReportGenerator.GuestReport.html#346-365" title="Go to source code">save</a>( <span>boolean <var>$overwrite</var> = <span class="php-keyword1">true</span></span> )</code>
-
-		<div class="description short">
-			<p>Save the report to a file</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Save the report to a file</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$overwrite</var></dt>
-					<dd>Overwrite the file if already exists</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					boolean<br>Whether the file was succesfully saved
-				</div>
-
-				<h4>Throws</h4>
-				<div class="list">
-					<code><a href="class-SpanishGuestReportGenerator.GuestReportException.html">SpanishGuestReportGenerator\GuestReportException</a></code>
-				</div>
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	</table>
-
-
-
-
-
-
-
-
-	<table class="summary constants" id="constants">
-	<caption>Constants summary</caption>
-	<tr data-order="FILE_NEWLINE" id="FILE_NEWLINE">
-
-		<td class="attributes"><code>string</code></td>
-		<td class="name">
-			<code>
-				<a href="source-class-SpanishGuestReportGenerator.GuestReport.html#30-35" title="Go to source code"><b>FILE_NEWLINE</b></a>
-			</code>
-
-			<div class="description short">
-				<p>Newline character to use</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Newline character to use</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#FILE_NEWLINE" class="anchor">#</a>
-				<code><span class="php-quote">&quot;\r\n&quot;</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="FILE_ENCODING" id="FILE_ENCODING">
-
-		<td class="attributes"><code>string</code></td>
-		<td class="name">
-			<code>
-				<a href="source-class-SpanishGuestReportGenerator.GuestReport.html#37-42" title="Go to source code"><b>FILE_ENCODING</b></a>
-			</code>
-
-			<div class="description short">
-				<p>Character encoding to use</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Character encoding to use</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#FILE_ENCODING" class="anchor">#</a>
-				<code><span class="php-quote">'CP437'</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="FIELD_DELIMITER" id="FIELD_DELIMITER">
-
-		<td class="attributes"><code>string</code></td>
-		<td class="name">
-			<code>
-				<a href="source-class-SpanishGuestReportGenerator.GuestReport.html#51-56" title="Go to source code"><b>FIELD_DELIMITER</b></a>
-			</code>
-
-			<div class="description short">
-				<p>Delimiter for all the fields in the document</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Delimiter for all the fields in the document</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#FIELD_DELIMITER" class="anchor">#</a>
-				<code><span class="php-quote">'|'</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="ROW_TYPE" id="ROW_TYPE">
-
-		<td class="attributes"><code>integer</code></td>
-		<td class="name">
-			<code>
-				<a href="source-class-SpanishGuestReportGenerator.GuestReport.html#58-63" title="Go to source code"><b>ROW_TYPE</b></a>
-			</code>
-
-			<div class="description short">
-				<p>First digit for the Chain info line</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>First digit for the Chain info line</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#ROW_TYPE" class="anchor">#</a>
-				<code><span class="php-num">0</span></code>
-			</div>
-		</td>
-	</tr>
-	</table>
-
-
-
-
-
-
-
-
-
-
-</div>
-
-	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
-	</div>
-</div>
-</div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Class SpanishGuestReportGenerator\GuestReport</title>
+
+        <link
+            rel="stylesheet"
+            href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da"
+        />
+    </head>
+
+    <body>
+        <div id="left">
+            <div id="menu">
+                <a href="index.html" title="Overview"><span>Overview</span></a>
+
+                <div id="groups">
+                    <h3>Namespaces</h3>
+                    <ul>
+                        <li class="active">
+                            <a
+                                href="namespace-SpanishGuestReportGenerator.html"
+                            >
+                                SpanishGuestReportGenerator<span></span>
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a
+                                        href="namespace-SpanishGuestReportGenerator.Util.html"
+                                    >
+                                        Util
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr />
+
+                <div id="elements">
+                    <h3>Classes</h3>
+                    <ul>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.AbstractFactory.html"
+                                >AbstractFactory</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.Guest.html"
+                                >Guest</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.GuestFactory.html"
+                                >GuestFactory</a
+                            >
+                        </li>
+                        <li class="active">
+                            <a
+                                href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                >GuestReport</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.Hotel.html"
+                                >Hotel</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.HotelFactory.html"
+                                >HotelFactory</a
+                            >
+                        </li>
+                    </ul>
+
+                    <h3>Traits</h3>
+                    <ul>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.FormatterTrait.html"
+                                >FormatterTrait</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.SanitizerTrait.html"
+                                >SanitizerTrait</a
+                            >
+                        </li>
+                    </ul>
+
+                    <h3>Exceptions</h3>
+                    <ul>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.FactoryException.html"
+                                >FactoryException</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="class-SpanishGuestReportGenerator.GuestReportException.html"
+                                >GuestReportException</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="splitter"></div>
+
+        <div id="right">
+            <div id="rightInner">
+                <form id="search">
+                    <input type="hidden" name="cx" value="" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <input
+                        type="text"
+                        name="q"
+                        class="text"
+                        placeholder="Search"
+                    />
+                </form>
+
+                <div id="navigation">
+                    <ul>
+                        <li>
+                            <a href="index.html" title="Overview"
+                                ><span>Overview</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="namespace-SpanishGuestReportGenerator.html"
+                                title="Summary of SpanishGuestReportGenerator"
+                                ><span>Namespace</span></a
+                            >
+                        </li>
+                        <li class="active">
+                            <span>Class</span>
+                        </li>
+                    </ul>
+                    <ul></ul>
+                    <ul></ul>
+                </div>
+
+                <div id="content" class="class">
+                    <h1>Class GuestReport</h1>
+
+                    <div class="description">
+                        <p>Guest Report</p>
+                    </div>
+
+                    <dl class="tree">
+                        <dd style="padding-left: 0px">
+                            <b
+                                ><span
+                                    >SpanishGuestReportGenerator\GuestReport</span
+                                ></b
+                            >
+
+                            uses
+                            <a
+                                href="class-SpanishGuestReportGenerator.FormatterTrait.html"
+                                ><span
+                                    >SpanishGuestReportGenerator\FormatterTrait</span
+                                ></a
+                            >,
+
+                            <a
+                                href="class-SpanishGuestReportGenerator.SanitizerTrait.html"
+                                ><span
+                                    >SpanishGuestReportGenerator\SanitizerTrait</span
+                                ></a
+                            >
+                        </dd>
+                    </dl>
+
+                    <div class="info">
+                        <b>Namespace:</b>
+                        <a href="namespace-SpanishGuestReportGenerator.html"
+                            >SpanishGuestReportGenerator</a
+                        ><br />
+                        <b>Package:</b> Spanish<br />
+
+                        <b>Copyright:</b>
+                        2021 Javier Zapata
+                        <a
+                            href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;"
+                            >&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a
+                        ><br />
+                        <b>License:</b>
+                        <a href="https://opensource.org/licenses/MIT"
+                            >The MIT License</a
+                        ><br />
+                        <b>Author:</b>
+                        Javier Zapata
+                        <a
+                            href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;"
+                            >&#x6a;&#97;&#x76;&#105;&#x65;&#114;&#x7a;&#97;&#112;&#x61;&#116;&#x61;&#56;&#x32;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a
+                        ><br />
+                        <b>Link:</b>
+                        <a
+                            href="https://github.com/jzfgo/spanish-guest-report-generator"
+                            >https://github.com/jzfgo/spanish-guest-report-generator</a
+                        ><br />
+                        <b>Located at</b>
+                        <a
+                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#16-431"
+                            title="Go to source code"
+                            >GuestReport.php</a
+                        >
+                        <br />
+                    </div>
+
+                    <table class="summary methods" id="methods">
+                        <caption>
+                            Methods summary
+                        </caption>
+                        <tr data-order="__construct" id="___construct">
+                            <td class="attributes"><code> public </code></td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#___construct">#</a>
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#114-130"
+                                            title="Go to source code"
+                                            >__construct</a
+                                        >(
+                                        <span
+                                            ><code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.HotelFactory.html"
+                                                    >SpanishGuestReportGenerator\HotelFactory</a
+                                                ></code
+                                            >
+                                            <var>$hotelFactory</var></span
+                                        >,
+                                        <span
+                                            ><code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestFactory.html"
+                                                    >SpanishGuestReportGenerator\GuestFactory</a
+                                                ></code
+                                            >
+                                            <var>$guestFactory</var></span
+                                        >,
+                                        <span
+                                            >DateTime
+                                            <var>$reportDateTime</var> =
+                                            <span class="php-keyword1"
+                                                >null</span
+                                            >
+                                        </span>
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>Creates a new report</p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>Creates a new report</p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt>
+                                                    <var>$hotelFactory</var>
+                                                </dt>
+                                                <dd>Hotel creator class</dd>
+                                                <dt>
+                                                    <var>$guestFactory</var>
+                                                </dt>
+                                                <dd>Guest creator class</dd>
+                                                <dt>
+                                                    <var>$reportDateTime</var>
+                                                </dt>
+                                                <dd>
+                                                    Date and time of the report
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="setChainCode" id="_setChainCode">
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setChainCode"
+                                        >#</a
+                                    >
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#132-143"
+                                            title="Go to source code"
+                                            >setChainCode</a
+                                        >(
+                                        <span
+                                            >string <var>$chainCode</var></span
+                                        >
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>Sets the Chain's code</p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>Sets the Chain's code</p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt><var>$chainCode</var></dt>
+                                                <dd></dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="setChainName" id="_setChainName">
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setChainName"
+                                        >#</a
+                                    >
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#145-156"
+                                            title="Go to source code"
+                                            >setChainName</a
+                                        >(
+                                        <span
+                                            >string <var>$chainName</var></span
+                                        >
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>Sets the Chain's name</p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>Sets the Chain's name</p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt><var>$chainName</var></dt>
+                                                <dd>Chain name</dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="setReportNumber" id="_setReportNumber">
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setReportNumber"
+                                        >#</a
+                                    >
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#158-183"
+                                            title="Go to source code"
+                                            >setReportNumber</a
+                                        >(
+                                        <span
+                                            >mixed
+                                            <var>$reportNumber</var></span
+                                        >
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>Sets the report number</p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>Sets the report number</p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt>
+                                                    <var>$reportNumber</var>
+                                                </dt>
+                                                <dd>Report number</dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr
+                            data-order="setReportDateTime"
+                            id="_setReportDateTime"
+                        >
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setReportDateTime"
+                                        >#</a
+                                    >
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#185-196"
+                                            title="Go to source code"
+                                            >setReportDateTime</a
+                                        >(
+                                        <span
+                                            >DateTime
+                                            <var>$reportDateTime</var></span
+                                        >
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>
+                                            Sets the Date and time of the report
+                                        </p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>
+                                            Sets the Date and time of the report
+                                        </p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt>
+                                                    <var>$reportDateTime</var>
+                                                </dt>
+                                                <dd>
+                                                    Date and time of the report
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="setChain" id="_setChain">
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setChain">#</a>
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#198-215"
+                                            title="Go to source code"
+                                            >setChain</a
+                                        >(
+                                        <span>string <var>$chainCode</var></span
+                                        >,
+                                        <span>string <var>$chainName</var></span
+                                        >,
+                                        <span
+                                            >DateTime
+                                            <var>$reportDateTime</var></span
+                                        >,
+                                        <span
+                                            >array <var>$hotels</var> = []</span
+                                        >
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>
+                                            Sets the info and contents for the
+                                            Chain
+                                        </p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>
+                                            Sets the info and contents for the
+                                            Chain
+                                        </p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt><var>$chainCode</var></dt>
+                                                <dd>Code of the Chain</dd>
+                                                <dt><var>$chainName</var></dt>
+                                                <dd>Name of the Chain</dd>
+                                                <dt>
+                                                    <var>$reportDateTime</var>
+                                                </dt>
+                                                <dd>Date and Time of report</dd>
+                                                <dt><var>$hotels</var></dt>
+                                                <dd>
+                                                    Hotels that belong to this
+                                                    Chain
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="setHotels" id="_setHotels">
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setHotels">#</a>
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#217-237"
+                                            title="Go to source code"
+                                            >setHotels</a
+                                        >(
+                                        <span>array <var>$hotels</var></span>
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>Set multiple Hotels at once</p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>Set multiple Hotels at once</p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt><var>$hotels</var></dt>
+                                                <dd>Hotels</dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="setHotel" id="_setHotel">
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setHotel">#</a>
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#239-263"
+                                            title="Go to source code"
+                                            >setHotel</a
+                                        >(
+                                        <span>string <var>$hotelCode</var></span
+                                        >,
+                                        <span>string <var>$hotelName</var></span
+                                        >,
+                                        <span
+                                            >DateTime
+                                            <var>$reportDateTime</var> =
+                                            <span class="php-keyword1"
+                                                >null</span
+                                            ></span
+                                        >,
+                                        <span
+                                            >array <var>$guests</var> = []
+                                        </span>
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>
+                                            Sets the info and contents for a
+                                            single Hotel
+                                        </p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>
+                                            Sets the info and contents for a
+                                            single Hotel
+                                        </p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt><var>$hotelCode</var></dt>
+                                                <dd>Code of the Hotel</dd>
+                                                <dt><var>$hotelName</var></dt>
+                                                <dd>Name of the Hotel</dd>
+                                                <dt>
+                                                    <var>$reportDateTime</var>
+                                                </dt>
+                                                <dd>Date and Time of report</dd>
+                                                <dt><var>$guests</var></dt>
+                                                <dd>
+                                                    Guests that belong to this
+                                                    Hotel
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="setHotelGuests" id="_setHotelGuests">
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setHotelGuests"
+                                        >#</a
+                                    >
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#265-284"
+                                            title="Go to source code"
+                                            >setHotelGuests</a
+                                        >(
+                                        <span>string <var>$hotelCode</var></span
+                                        >,
+                                        <span>array <var>$guests</var></span>
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>
+                                            Set the Guests for a specific Hotel
+                                        </p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>
+                                            Set the Guests for a specific Hotel
+                                        </p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt><var>$hotelCode</var></dt>
+                                                <dd>Code of the Hotel</dd>
+                                                <dt><var>$guests</var></dt>
+                                                <dd>
+                                                    Guests that belong to this
+                                                    Hotel
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+
+                                        <h4>Throws</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReportException.html"
+                                                    >SpanishGuestReportGenerator\GuestReportException</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr
+                            data-order="setDirectoryPath"
+                            id="_setDirectoryPath"
+                        >
+                            <td class="attributes">
+                                <code>
+                                    public
+
+                                    <code
+                                        ><a
+                                            href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                            >SpanishGuestReportGenerator\GuestReport</a
+                                        ></code
+                                    >
+                                </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_setDirectoryPath"
+                                        >#</a
+                                    >
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#286-317"
+                                            title="Go to source code"
+                                            >setDirectoryPath</a
+                                        >( <span>string <var>$path</var></span
+                                        >,
+                                        <span
+                                            >boolean <var>$create</var> =
+                                            <span class="php-keyword1"
+                                                >true</span
+                                            ></span
+                                        >
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>
+                                            Sets the path in which the generated
+                                            file will be saved
+                                        </p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>
+                                            Sets the path in which the generated
+                                            file will be saved
+                                        </p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt><var>$path</var></dt>
+                                                <dd>Destination path</dd>
+                                                <dt><var>$create</var></dt>
+                                                <dd>
+                                                    Create the path if it does
+                                                    not exist
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReport.html"
+                                                    >SpanishGuestReportGenerator\GuestReport</a
+                                                ></code
+                                            >
+                                        </div>
+
+                                        <h4>Throws</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReportException.html"
+                                                    >SpanishGuestReportGenerator\GuestReportException</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="getFilename" id="_getFilename">
+                            <td class="attributes">
+                                <code> public string </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_getFilename">#</a>
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#319-344"
+                                            title="Go to source code"
+                                            >getFilename</a
+                                        >( )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>Returns the output filename</p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>Returns the output filename</p>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            string<br />Output filename
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="save" id="_save">
+                            <td class="attributes">
+                                <code> public boolean </code>
+                            </td>
+
+                            <td class="name">
+                                <div>
+                                    <a class="anchor" href="#_save">#</a>
+                                    <code
+                                        ><a
+                                            href="source-class-SpanishGuestReportGenerator.GuestReport.html#346-365"
+                                            title="Go to source code"
+                                            >save</a
+                                        >(
+                                        <span
+                                            >boolean <var>$overwrite</var> =
+                                            <span class="php-keyword1"
+                                                >true</span
+                                            ></span
+                                        >
+                                        )</code
+                                    >
+
+                                    <div class="description short">
+                                        <p>Save the report to a file</p>
+                                    </div>
+
+                                    <div class="description detailed hidden">
+                                        <p>Save the report to a file</p>
+
+                                        <h4>Parameters</h4>
+                                        <div class="list">
+                                            <dl>
+                                                <dt><var>$overwrite</var></dt>
+                                                <dd>
+                                                    Overwrite the file if
+                                                    already exists
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <h4>Returns</h4>
+                                        <div class="list">
+                                            boolean<br />Whether the file was
+                                            succesfully saved
+                                        </div>
+
+                                        <h4>Throws</h4>
+                                        <div class="list">
+                                            <code
+                                                ><a
+                                                    href="class-SpanishGuestReportGenerator.GuestReportException.html"
+                                                    >SpanishGuestReportGenerator\GuestReportException</a
+                                                ></code
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="summary constants" id="constants">
+                        <caption>
+                            Constants summary
+                        </caption>
+                        <tr data-order="FILE_NEWLINE" id="FILE_NEWLINE">
+                            <td class="attributes"><code>string</code></td>
+                            <td class="name">
+                                <code>
+                                    <a
+                                        href="source-class-SpanishGuestReportGenerator.GuestReport.html#30-35"
+                                        title="Go to source code"
+                                        ><b>FILE_NEWLINE</b></a
+                                    >
+                                </code>
+
+                                <div class="description short">
+                                    <p>Newline character to use</p>
+                                </div>
+
+                                <div class="description detailed hidden">
+                                    <p>Newline character to use</p>
+                                </div>
+                            </td>
+                            <td class="value">
+                                <div>
+                                    <a href="#FILE_NEWLINE" class="anchor">#</a>
+                                    <code
+                                        ><span class="php-quote"
+                                            >&quot;\r\n&quot;</span
+                                        ></code
+                                    >
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="FILE_ENCODING" id="FILE_ENCODING">
+                            <td class="attributes"><code>string</code></td>
+                            <td class="name">
+                                <code>
+                                    <a
+                                        href="source-class-SpanishGuestReportGenerator.GuestReport.html#37-42"
+                                        title="Go to source code"
+                                        ><b>FILE_ENCODING</b></a
+                                    >
+                                </code>
+
+                                <div class="description short">
+                                    <p>Character encoding to use</p>
+                                </div>
+
+                                <div class="description detailed hidden">
+                                    <p>Character encoding to use</p>
+                                </div>
+                            </td>
+                            <td class="value">
+                                <div>
+                                    <a href="#FILE_ENCODING" class="anchor"
+                                        >#</a
+                                    >
+                                    <code
+                                        ><span class="php-quote"
+                                            >'CP437'</span
+                                        ></code
+                                    >
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="FIELD_DELIMITER" id="FIELD_DELIMITER">
+                            <td class="attributes"><code>string</code></td>
+                            <td class="name">
+                                <code>
+                                    <a
+                                        href="source-class-SpanishGuestReportGenerator.GuestReport.html#51-56"
+                                        title="Go to source code"
+                                        ><b>FIELD_DELIMITER</b></a
+                                    >
+                                </code>
+
+                                <div class="description short">
+                                    <p>
+                                        Delimiter for all the fields in the
+                                        document
+                                    </p>
+                                </div>
+
+                                <div class="description detailed hidden">
+                                    <p>
+                                        Delimiter for all the fields in the
+                                        document
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="value">
+                                <div>
+                                    <a href="#FIELD_DELIMITER" class="anchor"
+                                        >#</a
+                                    >
+                                    <code
+                                        ><span class="php-quote"
+                                            >'|'</span
+                                        ></code
+                                    >
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-order="ROW_TYPE" id="ROW_TYPE">
+                            <td class="attributes"><code>integer</code></td>
+                            <td class="name">
+                                <code>
+                                    <a
+                                        href="source-class-SpanishGuestReportGenerator.GuestReport.html#58-63"
+                                        title="Go to source code"
+                                        ><b>ROW_TYPE</b></a
+                                    >
+                                </code>
+
+                                <div class="description short">
+                                    <p>First digit for the Chain info line</p>
+                                </div>
+
+                                <div class="description detailed hidden">
+                                    <p>First digit for the Chain info line</p>
+                                </div>
+                            </td>
+                            <td class="value">
+                                <div>
+                                    <a href="#ROW_TYPE" class="anchor">#</a>
+                                    <code><span class="php-num">0</span></code>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="footer">
+                    API documentation generated by
+                    <a href="http://apigen.org">ApiGen</a>
+                </div>
+            </div>
+        </div>
+        <script src="resources/combined.js"></script>
+        <script src="elementlist.js"></script>
+    </body>
 </html>
