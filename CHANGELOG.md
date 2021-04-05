@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.2.2 (5 April 2021)
+
+-   Normalize filenames to prevent charset problems
+
 ## Version 1.2.1 (5 April 2021)
 
 -   Transfer package to its new owner
