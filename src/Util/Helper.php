@@ -6,7 +6,7 @@
  * @author     Javier Zapata <javierzapata82@gmail.com>
  * @copyright  2021 Javier Zapata <javierzapata82@gmail.com>
  * @license    https://opensource.org/licenses/MIT The MIT License
- * @link       https://github.com/jzfgo/spanish-guest-report-generator
+ * @link       https://github.com/bahiazul/spanish-guest-report-generator
  */
 
 namespace SpanishGuestReportGenerator\Util;
@@ -18,7 +18,7 @@ namespace SpanishGuestReportGenerator\Util;
  * @author     Javier Zapata <javierzapata82@gmail.com>
  * @copyright  2021 Javier Zapata <javierzapata82@gmail.com>
  * @license    https://opensource.org/licenses/MIT The MIT License
- * @link       https://github.com/jzfgo/spanish-guest-report-generator
+ * @link       https://github.com/bahiazul/spanish-guest-report-generator
  */
 class Helper
 {

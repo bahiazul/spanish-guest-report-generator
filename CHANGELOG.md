@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.2.1 (5 April 2021)
+
+-   Transfer package to its new owner
+
 ## Version 1.1.1 (31 March 2021)
 
 -   Switch to a more permissive license (BSD-3 -> MIT)
@@ -15,11 +19,3 @@
 ## Version 1.0.0 (27 September 2016)
 
 -   Initial release
-
-## Authors
-
--   [Javier Zapata](https://javi.io) ([Twitter](https://twitter.com/jzfgo))
-
-## License
-
-MIT

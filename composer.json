@@ -1,5 +1,5 @@
 {
-    "name": "nkm/spanish-guest-report-generator",
+    "name": "bahiazul/spanish-guest-report-generator",
     "type": "library",
     "description": "\"Spanish Guest Report Generator\" is an utility for hotels and other hospitality establishments to generate a report of all its newly arrived guests, that must be handed daily to the Spanish National Police or Civil Guard, as mandated by law.",
     "keywords": [
